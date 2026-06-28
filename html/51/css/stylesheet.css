@@ -1,0 +1,36 @@
+body{
+    background-image: url(../images/background-resturant.jpg);
+    background-position: center center, top right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header {
+    color: green;
+    text-align: center;
+    background-color: beige;
+    font-weight: 2em;
+    font-size: 1em;
+    border-radius: 25px;
+    border: 2px dotted yellowgreen;
+    text-transform: uppercase;
+}
+a {
+    font-size: 1em;
+    color: green;
+    font-weight: 1em;
+    text-decoration: none;
+}
+a:hover {
+    background-color: black;
+}
+a:visited {
+    color: gray;
+    background-color: pink;
+}
+a:active {
+    background-color: purple;
+}
+img{
+    background: radial-gradient(circle,rgba(217, 45, 26, 1) 7%, rgba(237, 221, 83, 1) 22%, rgba(83, 101, 237, 1) 40%, rgba(83, 237, 234, 1) 56%, rgba(247, 235, 0, 1) 77%, rgba(148, 0, 247, 1) 90%);
+    padding: 5px;
+}
