@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: solid 1px black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            font-style: italic;
+        }
+
+        input {
+            width: 50%;
+            margin: 10px;
+            display: block;
+        }
+
+        .dairy {
+            color: blue;
+        }
+
+        .meat {
+            color: red;
+        }
+
+        #fish {
+            color: aqua;
+        }
+
+        #chicken {
+            color: bisque;
+        }
+
+        thead * {
+            background-color: black;
+            border: dotted 2px white;
+        }
+
+        section div {
+            background-color: gray;
+            padding: 15px;
+            margin: 15px auto;
+            border: solid 1px salmon;
+            border-radius: 25px;
+            width: 80%;
+        }
+
+        table,
+        input {
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        div>span {
+            background-color: aliceblue;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        a {
+            text-decoration: none;
+            color: aqua;
+        }
+
+        a[href="ourmenu.html"] {
+            background-color: brown;
+        }
+
+        a[href^="index"] {
+            background-color: cadetblue;
+        }
+
+        [salamon="true"] {
+            background-color: aqua;
+        }
+
+        td::first-letter {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Place your <span>order</span>.</h1>
+        <section class="random">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </section>
+        <a href="ourmenu.html">Our Menu</a>
+        <a href="index.html">Home Page</a>
+    </div>
+
+    <table>
+        <thead>
+            <th class="dairy">Dairy</th>
+            <th class="meat">Meat</th>
+            <th id="fish">Fish</th>
+            <th id="chicken">Chicken</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="dairy">Pizza</td>
+                <td class="meat">Cowboy</td>
+                <td>Sushi</td>
+                <td>Grilled Chicken</td>
+            </tr>
+            <tr>
+                <td class="dairy">Lasgna</td>
+                <td class="meat">Skirt Steak</td>
+                <td salamon="true">Salamon</td>
+                <td>Chicken Bottoms</td>
+            </tr>
+            <tr>
+                <td class="dairy">Ice Cream</td>
+                <td class="meat">Surprise Steak</td>
+                <td>White Fish</td>
+                <td>Shnitzel</td>
+            </tr>
+            <tr>
+                <td class="dairy">FroYo</td>
+                <td class="meat">Hot Dogs</td>
+                <td>Talopia</td>
+                <td>Hot Poppers</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <section>
+        <div>
+            <span>We love that you are ordering from us.</span>
+            <p>Please give us your info so we can palce an <span>order</span>.</p>
+        </div>
+    </section>
+
+    <form>
+        <label>First Name<input name="first"></label>
+        <label>Last Name<input name="last"></label>
+        <label>Phone Number<input name="phone"></label>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
