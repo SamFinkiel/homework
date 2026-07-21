@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die</title>
+    <style>
+        body {
+            display: grid;
+            gap: 1em;
+        }
+
+        div {
+            display: grid;
+            border: 2px solid black;
+            height: 125px;
+            width: 125px;
+            border-radius: 25px;
+            grid-template-areas:
+                'a b c'
+                'd e f'
+                'g h i';
+        }
+
+        article {
+            border: 1px solid black;
+            height: 25px;
+            width: 25px;
+            border-radius: 50px;
+            background-color: red;
+        }
+
+        .face1 article,
+        .face3 article:nth-child(3),
+        .face5 article:nth-child(5) {
+            grid-area: e;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .face2 article:nth-child(1),
+        .face3 article:nth-child(1),
+        .face4 article:nth-child(1),
+        .face5 article:nth-child(1),
+        .face6 article:nth-child(1) {
+            grid-area: a;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .face2 article:nth-child(2),
+        .face3 article:nth-child(2),
+        .face4 article:nth-child(2),
+        .face5 article:nth-child(2),
+        .face6 article:nth-child(2) {
+            grid-area: i;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .face4 article:nth-child(3),
+        .face5 article:nth-child(3),
+        .face6 article:nth-child(3) {
+            grid-area: g;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .face4 article:nth-child(4),
+        .face5 article:nth-child(4),
+        .face6 article:nth-child(4) {
+            grid-area: c;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .face6 article:nth-child(5) {
+            grid-area: d;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .face6 article:nth-child(6) {
+            grid-area: f;
+            justify-self: center;
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="face1">
+        <article></article>
+    </div>
+    <div class="face2">
+        <article></article>
+        <article></article>
+    </div>
+    <div class="face3">
+        <article></article>
+        <article></article>
+        <article></article>
+    </div>
+    <div class="face4">
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+    </div>
+    <div class="face5">
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+    </div>
+    <div class="face6">
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+    </div>
+</body>
+
+</html>
