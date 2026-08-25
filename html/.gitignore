@@ -1,1 +1,7 @@
 \node_modules
+.claude/skills/my-rules
+.claude
+eslint.config.mjs
+package.json
+package-lock.json
+js-class
