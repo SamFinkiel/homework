@@ -30,5 +30,8 @@ const newMeds = trackDosage('Aspirin', 100);
 newMeds.getInstructions();
 newMeds.adjustDosage(1234, 40).getInstructions();
 
+newMeds.currentDosage = 55;
+newMeds.getInstructions();
+
 newMeds.fixedPin = 1111;
 newMeds.adjustDosage(1111, 56).getInstructions();
