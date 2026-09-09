@@ -5,10 +5,10 @@ let leftOffSet = -width / 2;
 
 let nextXindex = 1;
 
-export default function (msg, btn) {
-    console.log(msg);
-
-    const btnArray = btn.split(',');
+export default function (msg, btn, callback) {
+    console.log(msg);    
+    
+    const btnArray = btn ? btn.split(',') : [];
     const div = document.createElement('div');
 
     const msgDiv = document.createElement('div');
@@ -36,10 +36,13 @@ export default function (msg, btn) {
     buttonDiv.style.textAlign = 'center';
     buttonDiv.style.left = '0';
 
-    if (btnArray === 0) {
+    if (btnArray.length === 0) {
         const okButton = document.createElement('button');
         okButton.innerText = 'OK';
         okButton.addEventListener('click', () => {
+            if (callback) {
+                console.log(`${okButton.value} was clicked`);
+            }
             div.remove();
         });
         buttonDiv.appendChild(okButton);
@@ -49,7 +52,9 @@ export default function (msg, btn) {
             const newButton = document.createElement('button');
             newButton.innerText = btnArray[i];
             newButton.addEventListener('click', () => {
-                console.log(`${btnArray[i]} was clicked`);
+                if (callback) {
+                    console.log(`${btnArray[i]} was clicked`);
+                }
                 div.remove();
             });
             buttonDiv.appendChild(newButton);
@@ -73,10 +78,4 @@ export default function (msg, btn) {
     div.addEventListener('click', () => {
         div.style.zIndex = nextXindex++;
     });
-}
-
-export function addButtons(btn) {
-    btn = btn.split(','); 
-    console.log(btn);
-    
 }
