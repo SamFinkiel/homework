@@ -1,0 +1,11 @@
+.realBig {
+    font-size: 64px;
+    font-weight: 700;
+    font-style: monospace;
+    color: green;
+    display: inline-block;
+
+}
+.realBig:hover {
+    color: red;
+}
