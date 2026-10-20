@@ -1,0 +1,5 @@
+[
+    {"first": "Donald", "last": "Trump", "email": "dt@whitehouse.com", "phone": "212-426-8563" },
+    {"first": "J", "last": "D", "email": "jd@whitehouse.com", "phone": "347-426-8563" },
+    {"first": "Vlad", "last": "Putin", "email": "vp@kremlin.com", "phone": "555-426-5555" }
+]
