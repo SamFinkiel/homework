@@ -5,3 +5,4 @@ eslint.config.mjs
 package.json
 package-lock.json
 js-class
+config.js
