@@ -1,0 +1,16 @@
+{
+    "id": "010",
+  "name": "Apple Cinnamon Cake",
+  "cookTime": "1 hour",
+  "ingredient": [
+    "2 apples, peeled and chopped",
+    "2 cups flour",
+    "3/4 cup sugar",
+    "2 eggs",
+    "1/2 cup oil",
+    "1 teaspoon cinnamon",
+    "1 teaspoon baking powder"
+  ],
+  "instructions": "Preheat the oven to 350°F. Mix the eggs, sugar, and oil. Stir in the flour, cinnamon, and baking powder, then fold in the apples. Bake until a toothpick inserted in the center comes out clean.",
+  "imageURL": "Apple-Cinnamon-Cake.jpg"
+}
