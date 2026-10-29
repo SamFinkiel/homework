@@ -1,0 +1,8 @@
+{
+    "id":"001",
+    "name": "chulent", 
+    "cookTime": "1 Hour", 
+    "ingredient": ["Meat", "potatos", "barley", "water"],
+    "instructions": "Put into the crockpot and let cook.",
+    "imageURL": "Rustic Chulent Stew in a Ceramic Pot.png"
+}

@@ -1,0 +1,11 @@
+{
+    "id":"002",
+    "name": "chicken soup",
+    "cookTime": "5 Hour", 
+    "ingredient": ["Chicken", "water", "carots", "parsley"],
+    "instructions": "Dump it all into the pot and let it it simmer.",
+    "imageURL": "chicken-soup.jpg"
+
+}
+
+    

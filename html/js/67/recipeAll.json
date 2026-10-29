@@ -1,0 +1,52 @@
+[
+    {
+        "id":"001",
+        "name":"Chulent",
+        "url":"001.json"
+    },
+    {
+        "id":"002",
+        "name":"Chicken Soup",
+        "url":"002.json"
+    },
+    {
+        "id":"003",
+        "name":"Potato Kugel",
+        "url":"003.json"
+    },
+    {
+        "id":"004",
+        "name":"Beef Cholent",
+        "url":"004.json"
+    },
+    {
+        "id":"005",
+        "name":"Potato Kugel",
+        "url":"005.json"
+    },
+    {
+        "id":"006",
+        "name":"Matzo Ball Soup",
+        "url":"006.json"
+    },
+    {
+        "id":"007",
+        "name":"Stuffed Cabbage",
+        "url":"007.json"
+    },
+    {
+        "id":"008",
+        "name":"Chicken Schnitzel",
+        "url":"008.json"
+    },
+    {
+        "id":"009",
+        "name":"Roasted Garlic Salmon",
+        "url":"009.json"
+    },
+    {
+        "id":"010",
+        "name":"Apple Cinnamon Cake",
+        "url":"010.json"
+    }
+]

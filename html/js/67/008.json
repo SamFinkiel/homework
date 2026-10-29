@@ -1,0 +1,16 @@
+{
+    "id": "008",
+  "name": "Chicken Schnitzel",
+  "cookTime": "45 min",
+  "ingredient": [
+    "4 thin chicken cutlets",
+    "2 eggs",
+    "1 cup breadcrumbs",
+    "1/2 cup flour",
+    "1 teaspoon paprika",
+    "Oil for frying",
+    "Salt and pepper"
+  ],
+  "instructions": "Season the chicken. Coat each cutlet in flour, egg, and breadcrumbs. Pan-fry in hot oil until golden and cooked through.",
+  "imageURL": "Chicken-Schnitzel.jpg"
+}

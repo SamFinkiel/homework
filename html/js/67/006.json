@@ -1,0 +1,17 @@
+{
+    "id": "006",
+  "name": "Matzo Ball Soup",
+  "cookTime": "1 hour",
+  "ingredient": [
+    "8 cups chicken broth",
+    "2 carrots, sliced",
+    "2 celery stalks, sliced",
+    "1 onion, chopped",
+    "1 cup matzo meal",
+    "4 eggs",
+    "1/4 cup oil",
+    "Salt and pepper"
+  ],
+  "instructions": "Prepare matzo balls by mixing matzo meal, eggs, oil, and seasonings. Chill briefly, form balls, and simmer in broth with the vegetables until cooked through.",
+  "imageURL": "Matzo-Ball-Soup.jpg"
+}

@@ -1,0 +1,16 @@
+{
+    "id":"007",
+  "name": "Stuffed Cabbage",
+  "cookTime": "2 hours",
+  "ingredient": [
+    "1 large cabbage",
+    "1 pound ground beef",
+    "1/2 cup cooked rice",
+    "1 onion, chopped",
+    "2 cups tomato sauce",
+    "1 tablespoon brown sugar",
+    "Salt and pepper"
+  ],
+  "instructions": "Soften the cabbage leaves. Mix beef, rice, onion, and seasonings. Wrap the filling in cabbage leaves, cover with tomato sauce, and simmer gently until cooked through.",
+  "imageURL": "Stuffed-Cabbage.jpg"
+}

@@ -1,0 +1,8 @@
+{
+    "id":"003",
+    "name": "Potato Kugel",
+    "cookTime": "17 Hour", 
+    "ingredient": ["Potato", "Oil", "Onions", "black pepper", "salt"],
+    "instructions": "Put into a 9x13, put it in the overn and let it bake for a whole night.",
+    "imageURL": "images.jpg"
+}
