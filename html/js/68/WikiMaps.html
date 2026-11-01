@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f5f7;
+            color: #252a34;
+        }
+
+        #main-container {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 24px;
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 24px;
+            align-items: start;
+        }
+
+        #sidebar {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            height: 500px;
+            overflow-y: auto;
+        }
+
+        #map-container {
+            width: 100%;
+        }
+
+        #map {
+            height: 500px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        #resultsList {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        #resultsList li {
+            background: #f8f9fb;
+            padding: 16px;
+            margin-bottom: 14px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        #resultsList li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+        }
+
+        #resultsList h5 {
+            font-size: 15px;
+            font-weight: 600;
+            margin: 0 0 8px;
+        }
+
+        #resultsList p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #626b78;
+            margin: 0 0 12px;
+        }
+
+        #resultsList a {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        #resultsList a:hover {
+            text-decoration: underline;
+        }
+
+        #header {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 20px 0 12px;
+        }
+
+        #search {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        #search:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+        }
+
+        #searchBtn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2563eb;
+            color: white;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        #searchBtn:hover {
+            background-color: #1d4ed8;
+        }
+
+        @media (max-width: 768px) {
+            #main-container {
+                grid-template-columns: 1fr;
+                margin: 20px auto;
+                padding: 0 16px;
+            }
+
+            #sidebar {
+                height: auto;
+                max-height: 400px;
+            }
+
+            #map {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="sidebar">
+            <input type="text" id="search" placeholder="Search Here..." />
+            <button id="searchBtn">Search</button>
+
+            <div id="results">
+                <h1 id="header"></h1>
+
+                <ul id="resultsList"></ul>
+            </div>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    
+    <script src="config.js"></script>
+    <script>
+        if (window.APP_CONFIG?.googleMapsApiKey) {
+            (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+                key: window.APP_CONFIG.googleMapsApiKey,
+                v: "weekly",
+                // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+                // Add other bootstrap parameters as needed, using camel case.
+            });
+            const appScript = document.createElement('script');
+            appScript.type = 'module';
+            appScript.src = 'wikiMaps.js';
+            document.body.append(appScript);
+        } else {
+            document.querySelector('#header').textContent =
+                'Google Maps is currently unavailable. Missing API key.';
+        }
+    </script>
+</body>
+
+</html>
