@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="sidebar">
+            <input type="text" id="search" placeholder="Search Here..." />
+            <button id="searchBtn">Search</button>
+
+            <div id="results">
+                <h1 id="header"></h1>
+
+                <ul id="resultsList"></ul>
+            </div>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div id="saved">
+        <button id="clearSavedPlaces">Clear</button>
+        <h2 id="savedHeader">Saved Places</h2>
+        <ul id="savedList"></ul>
+    </div>
+
+    <script src="config.js"></script>
+    <script>
+        if (window.APP_CONFIG?.googleMapsApiKey) {
+            (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+                key: window.APP_CONFIG.googleMapsApiKey,
+                v: "weekly",
+                // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+                // Add other bootstrap parameters as needed, using camel case.
+            });
+            const appScript = document.createElement('script');
+            appScript.type = 'module';
+            appScript.src = 'wikiMaps.js';
+            document.body.append(appScript);
+        } else {
+            document.querySelector('#header').textContent =
+                'Google Maps is currently unavailable. Missing API key.';
+        }
+    </script>
+</body>
+
+</html>
